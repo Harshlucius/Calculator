@@ -55,7 +55,8 @@ class Calculator:
         elif event.keysym == "Return":
             self.solve()
         elif event.keysym == "BackSpace":
-            self.clear()
+            self.entry_value = self.entry_value[:-1]
+            self.equation.set(self.entry_value) 
 
 root = Tk()
 calculator = Calculator(root)
